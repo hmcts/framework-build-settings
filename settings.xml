@@ -20,6 +20,40 @@
   </servers>
   <mirrors/>
   <proxies/>
-  <profiles/>
-  <activeProfiles/>
+  <profiles>
+    <profile>
+      <id>indigoblue</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <name>Maven Repository Switchboard</name>
+          <layout>default</layout>
+          <url>http://repo1.maven.org/maven2</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>indigoblue-nexus-release</id>
+          <name>IndigoBlue Snapshot Repository</name>
+          <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>indigoblue-nexus-snapshot</id>
+          <name>IndigoBlue Release Repository</name>
+          <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+ 
+  <activeProfiles>
+    <activeProfile>indigoblue</activeProfile>
+  </activeProfiles>
 </settings>
