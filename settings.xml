@@ -1,59 +1,89 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <localRepository/>
-  <interactiveMode/>
-  <usePluginRegistry/>
-  <offline/>
-  <pluginGroups/>
-  <servers>
-    <server>
-      <id>indigoblue-nexus-snapshot</id>
-      <username>${env.CI_DEPLOY_USERNAME}</username>
-      <password>${env.CI_DEPLOY_PASSWORD}</password>
-    </server>
-    <server>
-      <id>indigoblue-nexus-release</id>
-      <username>${env.CI_DEPLOY_USERNAME}</username>
-      <password>${env.CI_DEPLOY_PASSWORD}</password>
-    </server>
-  </servers>
-  <mirrors/>
-  <proxies/>
-  <profiles>
-    <profile>
-      <id>indigoblue</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <name>Maven Repository Switchboard</name>
-          <layout>default</layout>
-          <url>http://repo1.maven.org/maven2</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>indigoblue-nexus-release</id>
-          <name>IndigoBlue Snapshot Repository</name>
-          <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>indigoblue-nexus-snapshot</id>
-          <name>IndigoBlue Release Repository</name>
-          <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
- 
-  <activeProfiles>
-    <activeProfile>indigoblue</activeProfile>
-  </activeProfiles>
+    <localRepository/>
+    <interactiveMode/>
+    <usePluginRegistry/>
+    <offline/>
+    <pluginGroups/>
+    <servers>
+        <server>
+            <id>indigoblue-nexus-snapshot</id>
+            <username>${env.CI_DEPLOY_USERNAME}</username>
+            <password>${env.CI_DEPLOY_PASSWORD}</password>
+        </server>
+        <server>
+            <id>indigoblue-nexus-release</id>
+            <username>${env.CI_DEPLOY_USERNAME}</username>
+            <password>${env.CI_DEPLOY_PASSWORD}</password>
+        </server>
+    </servers>
+    <mirrors/>
+    <proxies/>
+    <profiles>
+        <profile>
+            <id>indigoblue</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>Maven Repository Switchboard</name>
+                    <layout>default</layout>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>indigoblue-nexus-release</id>
+                    <name>IndigoBlue Snapshot Repository</name>
+                    <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>indigoblue-nexus-snapshot</id>
+                    <name>IndigoBlue Release Repository</name>
+                    <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>Maven Plugin Repository</name>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>indigoblue-plugin-nexus-release</id>
+                    <name>IndigoBlue Plugin Snapshot Repository</name>
+                    <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>indigoblue-plugin-nexus-snapshot</id>
+                    <name>IndigoBlue Plugin Release Repository</name>
+                    <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>indigoblue</activeProfile>
+    </activeProfiles>
 </settings>
