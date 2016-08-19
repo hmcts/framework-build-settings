@@ -2,7 +2,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <localRepository/>
-    <interactiveMode/>
+    <interactiveMode>false</interactiveMode>
     <usePluginRegistry/>
     <offline/>
     <pluginGroups/>
@@ -35,17 +35,25 @@
                 </repository>
                 <repository>
                     <id>indigoblue-nexus-release</id>
-                    <name>IndigoBlue Snapshot Repository</name>
+                    <name>IndigoBlue Release Repository</name>
                     <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
+                    <releases>
+                        <checksumPolicy>fail</enabled>
+                        <enabled>true</enabled>
+                    </releases>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
                 <repository>
                     <id>indigoblue-nexus-snapshot</id>
-                    <name>IndigoBlue Release Repository</name>
+                    <name>IndigoBlue Snapshot Repository</name>
                     <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
                     <snapshots>
+                        <checksumPolicy>fail</enabled>
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
@@ -65,17 +73,25 @@
                 </pluginRepository>
                 <pluginRepository>
                     <id>indigoblue-plugin-nexus-release</id>
-                    <name>IndigoBlue Plugin Snapshot Repository</name>
+                    <name>IndigoBlue Plugin Release Repository</name>
                     <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-releases/</url>
+                    <releases>
+                        <checksumPolicy>fail</enabled>
+                        <enabled>true</enabled>
+                    </releases>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
                 </pluginRepository>
                 <pluginRepository>
                     <id>indigoblue-plugin-nexus-snapshot</id>
-                    <name>IndigoBlue Plugin Release Repository</name>
+                    <name>IndigoBlue Plugin Snapshot Repository</name>
                     <url>https://tools.indigoblue.co.uk/nexus/content/repositories/moj-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
                     <snapshots>
+                        <checksumPolicy>fail</enabled>
                         <enabled>true</enabled>
                     </snapshots>
                 </pluginRepository>
