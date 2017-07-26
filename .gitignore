@@ -1,0 +1,20 @@
+# Backup files...
+*~
+*.bak
+
+# Eclipse/PyDev stuff...
+.checkstyle
+.project
+.pydevproject
+.settings/
+
+# Mac OS X stuff...
+.DS_Store
+
+# Sublime stuff...
+*.sublime-project
+*.sublime-workspace
+
+# Ruby
+.bundle/
+vendor/

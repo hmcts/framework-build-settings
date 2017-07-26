@@ -1,0 +1,8 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: v0.9.1
+    hooks:
+    -   id: trailing-whitespace
+        files: \.(js|json|rb|md|py|sh|txt|xml|yaml|yml)$
+    -   id: check-xml
+    -   id: check-case-conflict
+    -   id: end-of-file-fixer
