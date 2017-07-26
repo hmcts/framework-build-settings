@@ -1,11 +1,7 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <localRepository/>
     <interactiveMode>false</interactiveMode>
-    <usePluginRegistry/>
-    <offline/>
-    <pluginGroups/>
     <servers>
         <server>
             <id>bintray-cjscommonplatform-maven-releases</id>
@@ -13,12 +9,17 @@
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
     </servers>
-    <mirrors/>
-    <proxies/>
     <profiles>
         <profile>
             <id>bintray</id>
             <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
                 <repository>
                     <id>bintray-cjscommonplatform-maven-releases</id>
                     <name>bintray</name>
@@ -29,6 +30,13 @@
                 </repository>
             </repositories>
             <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
                 <pluginRepository>
                     <id>bintray-cjscommonplatform-maven-releases</id>
                     <name>bintray-plugins</name>
