@@ -9,20 +9,20 @@
     <servers>
         <server>
             <id>bintray-cjscommonplatform-maven-releases</id>
-	    <username>${env.BINTRAY_USERNAME}</username>
+            <username>${env.BINTRAY_USERNAME}</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
     </servers>
     <mirrors/>
     <proxies/>
     <profiles>
- 	<profile>
+        <profile>
             <id>bintray</id>
             <repositories>
                 <repository>
                     <id>bintray-cjscommonplatform-maven-releases</id>
                     <name>bintray</name>
-		    <url>http://dl.bintray.com/cjscommonplatform/maven-releases</url>
+                    <url>http://dl.bintray.com/cjscommonplatform/maven-releases</url>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
@@ -32,7 +32,7 @@
                 <pluginRepository>
                     <id>bintray-cjscommonplatform-maven-releases</id>
                     <name>bintray-plugins</name>
-		    <url>http://dl.bintray.com/cjscommonplatform/maven-releases</url>
+                    <url>http://dl.bintray.com/cjscommonplatform/maven-releases</url>
                     <snapshots>
                         <enabled>false</enabled>
                     </snapshots>
