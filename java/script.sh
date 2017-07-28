@@ -1,2 +1,2 @@
-#!/bin/bash
-mvn -B -V verify $*
+#!/bin/bash -x
+mvn -B -V verify "$@"
