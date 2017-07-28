@@ -1,2 +1,2 @@
 #!/bin/bash
-mvn -B -V verify
+mvn -B -V verify $*
