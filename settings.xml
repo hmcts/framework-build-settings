@@ -55,6 +55,46 @@
                 </pluginRepository>
             </pluginRepositories>
         </profile>
+        <!-- Use multiple profiles to ensure sonarcloud is only used on master builds and internal PRs. -->
+        <profile>
+            <id>sonar-travis-build-non-master</id>
+            <activation>
+                <property>
+                    <name>env.TRAVIS_BUILD</name>
+                    <value>!master</value>
+                </property>
+            </activation>
+            <properties>
+                <!-- branch is not master, skip -->
+                <sonar.skip>true</sonar.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>sonar-travis-build-external</id>
+            <activation>
+                <property>
+                    <name>env.TRAVIS_SECURE_ENV_VARS</name>
+                    <value>!true</value>
+                </property>
+            </activation>
+            <properties>
+                <!-- external if there are no secure environment variables -->
+                <sonar.skip>true</sonar.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>sonar-travis-build-PR</id>
+            <activation>
+                <property>
+                    <name>env.TRAVIS_PULL_REQUEST</name>
+                    <value>!false</value>
+                </property>
+            </activation>
+            <properties>
+                <!-- PR? preview mode only -->
+                <sonar.analysis.mode>preview</sonar.analysis.mode>
+            </properties>
+        </profile>
     </profiles>
 
     <activeProfiles>
