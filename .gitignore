@@ -6,6 +6,7 @@
 .checkstyle
 .project
 .pydevproject
+*.iml
 .settings/
 
 # Mac OS X stuff...
