@@ -34,6 +34,27 @@
             </pluginRepositories>
         </profile>
         <profile>
+            <id>jitpack.io</id>
+            <repositories>
+                <repository>
+                    <id>jitpack.io</id>
+                    <url>https://jitpack.io</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>jitpack.io</id>
+                    <url>https://jitpack.io</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+        <profile>
             <id>securecentral</id>
             <!--Override the repository (and pluginRepository) "central" from the Maven Super POM -->
             <repositories>
@@ -85,6 +106,7 @@
 
     <activeProfiles>
         <activeProfile>bintray</activeProfile>
+        <activeProfile>jitpack.io</activeProfile>
         <activeProfile>securecentral</activeProfile>
     </activeProfiles>
 </settings>
