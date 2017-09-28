@@ -1,2 +1,3 @@
 #!/bin/bash -x
-mvn -B -V install "$@"
+[[ -x ./mvnw ]] && MVN=./mvnw || MVN=mvnw
+$MVN -B -V install "$@"

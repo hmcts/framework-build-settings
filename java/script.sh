@@ -1,2 +1,3 @@
 #!/bin/bash -x
-mvn -B -V verify "$@"
+[[ -x ./mvnw ]] && MVN=./mvnw || MVN=mvn
+$MVN -B -V verify "$@"
