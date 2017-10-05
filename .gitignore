@@ -12,6 +12,9 @@
 # Mac OS X stuff...
 .DS_Store
 
+# Maven Wrapper #
+!.mvn/wrapper/maven-wrapper.jar
+
 # Sublime stuff...
 *.sublime-project
 *.sublime-workspace
