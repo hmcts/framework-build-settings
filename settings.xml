@@ -98,8 +98,6 @@
                 </property>
             </activation>
             <properties>
-                <!-- PR? preview mode only -->
-                <sonar.analysis.mode>preview</sonar.analysis.mode>
             </properties>
         </profile>
     </profiles>
