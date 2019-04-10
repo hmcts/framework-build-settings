@@ -89,17 +89,17 @@
                 <sonar.skip>true</sonar.skip>
             </properties>
         </profile>
-        <profile>
-            <id>sonar-travis-PR</id>
-            <activation>
-                <property>
-                    <name>env.TRAVIS_PULL_REQUEST</name>
-                    <value>!false</value>
-                </property>
-            </activation>
-            <properties>
-            </properties>
-        </profile>
+        <!--<profile>-->
+            <!--<id>sonar-travis-PR</id>-->
+            <!--<activation>-->
+                <!--<property>-->
+                    <!--<name>env.TRAVIS_PULL_REQUEST</name>-->
+                    <!--<value>!false</value>-->
+                <!--</property>-->
+            <!--</activation>-->
+            <!--<properties>-->
+            <!--</properties>-->
+        <!--</profile>-->
     </profiles>
 
     <activeProfiles>
