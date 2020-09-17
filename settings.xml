@@ -8,6 +8,12 @@
             <username>${env.BINTRAY_USERNAME}</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
+        <!-- for cloudsmith -->
+        <server>
+            <id>cjscommonplatform-maven-repository</id>
+            <username>token</username>
+            <password>${env.CLOUDSMITH_API_KEY}</password>
+        </server>
     </servers>
     <profiles>
         <profile>
@@ -77,6 +83,39 @@
             </pluginRepositories>
         </profile>
         <profile>
+            <id>cloudsmith</id>
+            <repositories>
+                <repository>
+                    <id>cjscommonplatform-maven-repository</id>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
+                    </url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>cjscommonplatform-maven-repository</id>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
+                    </url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+        <profile>
             <id>sonar-travis-skip</id>
             <activation>
                 <property>
@@ -103,6 +142,7 @@
     </profiles>
 
     <activeProfiles>
+        <activeProfile>cloudsmith</activeProfile>
         <activeProfile>bintray</activeProfile>
         <activeProfile>jitpack.io</activeProfile>
         <activeProfile>securecentral</activeProfile>
