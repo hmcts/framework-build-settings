@@ -1,24 +1,6 @@
-# Backup files...
-*~
-*.bak
-
-# Eclipse/PyDev stuff...
-.checkstyle
-.project
-.pydevproject
-*.iml
-.settings/
-
-# Mac OS X stuff...
+crash.log
+.swp
 .DS_Store
-
-# Maven Wrapper #
-!.mvn/wrapper/maven-wrapper.jar
-
-# Sublime stuff...
-*.sublime-project
-*.sublime-workspace
-
-# Ruby
-.bundle/
-vendor/
+*.lock.hcl
+.idea/
+*.iml
