@@ -8,6 +8,19 @@
             <id>cjscommonplatform-maven-repository</id>
             <username>token</username>
             <password>${env.CLOUDSMITH_API_KEY}</password>
+            <configuration>
+                <httpConfiguration>
+                    <all>
+                        <connectionTimeout>20000</connectionTimeout> <!-- 20 seconds -->
+                        <readTimeout>120000</readTimeout> <!-- 120 seconds -->
+                    </all>
+                </httpConfiguration>
+            </configuration>
+        </server>
+        <server>
+            <id>central</id>
+            <username>admin</username>
+            <password>70874856-244a-4140-a39a-ba857458488f</password>
         </server>
     </servers>
     <profiles>
@@ -38,7 +51,7 @@
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -47,7 +60,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
