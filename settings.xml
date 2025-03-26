@@ -18,7 +18,7 @@
             </configuration>
         </server>
         <server>
-            <id>central</id>
+            <id>securecentral</id>
             <username>admin</username>
             <password>70874856-244a-4140-a39a-ba857458488f</password>
         </server>
@@ -50,7 +50,7 @@
             <!--Override the repository (and pluginRepository) "central" from the Maven Super POM -->
             <repositories>
                 <repository>
-                    <id>central</id>
+                    <id>securecentral</id>
                     <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
@@ -59,7 +59,7 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>central</id>
+                    <id>securecentral</id>
                     <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
