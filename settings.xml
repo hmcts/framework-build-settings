@@ -72,8 +72,7 @@
             <repositories>
                 <repository>
                     <id>cjscommonplatform-maven-repository</id>
-                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
-                    </url>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
@@ -87,8 +86,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>cjscommonplatform-maven-repository</id>
-                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
-                    </url>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
@@ -129,6 +127,6 @@
     <activeProfiles>
         <activeProfile>cloudsmith</activeProfile>
         <activeProfile>jitpack.io</activeProfile>
-        <activeProfile>securecentral</activeProfile>
+<!--        <activeProfile>securecentral</activeProfile>-->
     </activeProfiles>
 </settings>
