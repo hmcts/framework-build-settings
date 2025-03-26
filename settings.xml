@@ -18,7 +18,7 @@
             </configuration>
         </server>
         <server>
-            <id>securecentral</id>
+            <id>securecentral-upload</id>
             <username>admin</username>
             <password>70874856-244a-4140-a39a-ba857458488f</password>
         </server>
