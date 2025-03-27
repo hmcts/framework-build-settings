@@ -8,6 +8,19 @@
             <id>cjscommonplatform-maven-repository</id>
             <username>token</username>
             <password>${env.CLOUDSMITH_API_KEY}</password>
+            <configuration>
+                <httpConfiguration>
+                    <all>
+                        <connectionTimeout>20000</connectionTimeout> <!-- 20 seconds -->
+                        <readTimeout>120000</readTimeout> <!-- 120 seconds -->
+                    </all>
+                </httpConfiguration>
+            </configuration>
+        </server>
+        <server>
+            <id>securecentral-upload</id>
+            <username>admin</username>
+            <password>${env.SECURECENTRAL_PASSWORD}</password>
         </server>
     </servers>
     <profiles>
@@ -37,8 +50,8 @@
             <!--Override the repository (and pluginRepository) "central" from the Maven Super POM -->
             <repositories>
                 <repository>
-                    <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <id>securecentral</id>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -46,8 +59,8 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <id>securecentral</id>
+                    <url>https://libraries-internal.mdv.cpp.nonlive/artifactory/repocentral</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -59,8 +72,7 @@
             <repositories>
                 <repository>
                     <id>cjscommonplatform-maven-repository</id>
-                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
-                    </url>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
@@ -74,8 +86,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>cjscommonplatform-maven-repository</id>
-                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven/
-                    </url>
+                    <url>https://dl.cloudsmith.io/public/cjscommonplatform/maven-repository/maven</url>
                     <releases>
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
