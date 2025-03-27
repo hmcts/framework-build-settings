@@ -125,7 +125,7 @@
     </profiles>
 
     <activeProfiles>
-        <activeProfile>cloudsmith</activeProfile>
+<!--        <activeProfile>cloudsmith</activeProfile>-->
         <activeProfile>jitpack.io</activeProfile>
         <activeProfile>securecentral</activeProfile>
     </activeProfiles>
